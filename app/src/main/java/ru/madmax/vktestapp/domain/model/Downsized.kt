@@ -1,8 +1,8 @@
 package ru.madmax.vktestapp.domain.model
 
 data class Downsized(
-    val height: String,
-    val size: String,
-    val url: String,
-    val width: String
+    val height: String = "",
+    val size: String = "",
+    val url: String = "",
+    val width: String = ""
 )

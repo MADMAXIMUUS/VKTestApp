@@ -2,6 +2,7 @@ package ru.madmax.vktestapp.domain.repository
 
 import kotlinx.coroutines.flow.Flow
 import ru.madmax.vktestapp.domain.model.Response
+import ru.madmax.vktestapp.domain.model.SimpleResponse
 
 interface GifRepository {
 
@@ -22,5 +23,5 @@ interface GifRepository {
     suspend fun getById(
         id: String,
         apiKey: String
-    ): Flow<Response>
+    ): Flow<SimpleResponse>
 }

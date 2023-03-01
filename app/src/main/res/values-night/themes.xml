@@ -28,4 +28,16 @@
         <item name="android:textColorSecondary">@color/black</item>
     </style>
 
+    <style name="GifUsername">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="GifTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

@@ -4,17 +4,18 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 import ru.madmax.vktestapp.domain.model.Response
+import ru.madmax.vktestapp.domain.model.SimpleResponse
 
 interface GifApi {
 
-    @GET("/trending")
-    fun getLatest(
+    @GET("trending")
+    suspend fun getLatest(
         @Query("api_key") apiKey: String,
         @Query("limit") limit: Int,
         @Query("rating") rating: String
     ): Response
 
-    @GET("/search")
+    @GET("search")
     suspend fun search(
         @Query("api_key") apiKey: String,
         @Query("q") query: String,
@@ -23,9 +24,9 @@ interface GifApi {
         @Query("rating") rating: String
     ): Response
 
-    @GET("/{id}")
+    @GET("{id}")
     suspend fun getById(
         @Path("id") id: String,
         @Query("api_key") apiKey: String
-    ): Response
+    ): SimpleResponse
 }

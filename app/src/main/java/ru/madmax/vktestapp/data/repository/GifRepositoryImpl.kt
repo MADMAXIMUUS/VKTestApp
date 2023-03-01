@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import ru.madmax.vktestapp.data.dataSource.GifApi
 import ru.madmax.vktestapp.domain.model.Response
+import ru.madmax.vktestapp.domain.model.SimpleResponse
 import ru.madmax.vktestapp.domain.repository.GifRepository
 
 class GifRepositoryImpl(private val gifApi: GifApi) : GifRepository {
@@ -26,7 +27,7 @@ class GifRepositoryImpl(private val gifApi: GifApi) : GifRepository {
         emit(gifApi.search(apiKey, query, limit, offset, rating))
     }
 
-    override suspend fun getById(id: String, apiKey: String): Flow<Response> = flow {
+    override suspend fun getById(id: String, apiKey: String): Flow<SimpleResponse> = flow {
         emit(gifApi.getById(id, apiKey))
     }
 }

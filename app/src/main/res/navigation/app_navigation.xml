@@ -18,5 +18,9 @@
         android:id="@+id/detailsFragment"
         android:name="ru.madmax.vktestapp.presentation.detailsScreen.DetailsFragment"
         android:label="Details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="gifId"
+            app:argType="string" />
+    </fragment>
 </navigation>
